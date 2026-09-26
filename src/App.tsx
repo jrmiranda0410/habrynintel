@@ -69,7 +69,7 @@ function App() {
   const login = (account: DemoUser) => setUser(account)
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       {showSplash && <OpeningSplash />}
       <Routes>
         <Route path="/" element={<Landing user={user} />} />

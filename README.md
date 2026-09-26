@@ -259,13 +259,13 @@ The production build generates a static bundle in the `dist/` directory.
 
 ## GitHub deployment / static hosting
 
-This project is a Vite client-side application configured for static hosting. The build output is optimized for GitHub Pages or other static hosts that support SPA routing.
+This project is a Vite client-side application configured for GitHub Pages at `https://jrmiranda0410.github.io/habrynintel/`. The deployment workflow publishes the `dist/` output and copies `index.html` to `404.html` so direct navigation to client-side routes continues to load the app.
 
 For static hosting, use the generated `dist/` output.
 
 Important:
 
-- SPA routes are supported with a fallback strategy on the hosting platform.
+- SPA routes use the `/habrynintel/` base path and a GitHub Pages `404.html` fallback.
 - The app uses browser-local demo state and does not depend on a backend for the prototype flow.
 - Demo payment and AI functionality are simulated and intentionally not production-grade.
 
